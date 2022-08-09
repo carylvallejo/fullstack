@@ -29,7 +29,9 @@ const Content = (props) => {
 const Total = (props) => {
   let total = 0;
   const part = props.course.parts.map(value => {
+    console.log(value)
     total = total + value.exercises
+    console.log(total)
   })
   console.log(part)
   return (
