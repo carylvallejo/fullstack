@@ -1,4 +1,5 @@
 const Header = (props) => {
+  console.log(props)
   return (
     <div>
       <h1>{props.course.name}</h1>
@@ -27,13 +28,12 @@ const Content = (props) => {
 
 
 const Total = (props) => {
+  console.log(props)
   let total = 0;
   const part = props.course.parts.map(value => {
-    console.log(value)
     total = total + value.exercises
     console.log(total)
   })
-  console.log(part)
   return (
     <div>
       <p>Number of exercises {total}</p>
