@@ -1,5 +1,4 @@
-const Header = (props) => {
-  const {course} = props;
+const Header = ({ course }) => { 
   const {name} = course;
   return(
     <div>
@@ -8,8 +7,7 @@ const Header = (props) => {
   )
 }
 
-const Total = (props) => {
-  const {course} = props;
+const Total = ({ course }) => {
   const {parts} = course;
 
   let total = 0;
@@ -27,16 +25,15 @@ const Total = (props) => {
   )
 }
 
-const Part = (props) => {
+const Part = ({part, exercises}) => {
   return(
     <p>
-      {props.part} {props.exercises}
+      {part} {exercises}
     </p>
   );
 }
 
-const Content = (props) => {
-  const {course} = props;
+const Content = ({course}) => {
   const {parts} = course;
   return(
     <div>
